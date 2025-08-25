@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+html{
+  background-color: #fff;
+  color: #333;
+  font-size: 10px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+ol, ul{
+  list-style: none;
+}
+#wrap{
+  width: 100%;
+  height: 800px;
+}
+.inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/*header*/
+header{
+  height: 100px;
+  background-color: lightgray;
+}
+header .inner{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .h-logo{
+  width: 200px;
+}
+header .h-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*gnb*/
+.gnb{
+  display: flex;
+}
+.gnb > li{
+  position: relative;
+}
+.gnb > li > a{
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  width: 150px;
+  padding: 10px 0;
+}
+.gnb > li:hover > a{
+  color: #fff;
+  background-color: steelblue;
+}
+.gnb .depth2{
+  height: 160px;
+  background-color: #333;
+  display: none;
+}
+.gnb .depth2 li a{
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.gnb .depth2 li:hover a{
+  background-color: steelblue;
+  color: #fff;
+}
+
+
+/*#slide*/
+
+#slide .inner{
+  height: 300px;
+  overflow: hidden;
+}
+
+#slide .swiper-wrapper{
+  display: flex;
+}
+#slide .swiper-slide{
+  position: relative;
+  width: 100%;
+}
+
+#slide .swiper-slide span{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  padding: 30px 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+}
+/*#contents*/
+#contents .inner{
+  display: flex;
+  height: 200px;
+  padding: 10px 0;
+}
+#contents .inner > div{
+  width: calc(100% / 3);
+}
+#contents .tab-tit ul{
+  display: flex;
+}
+#contents .tab-tit ul li{
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+#contents .tab-tit ul li.active{
+  background-color: steelblue;
+  font-weight: bold;
+}
+#contents .tab-cont{
+  padding: 20px 10px;
+}
+#contents .tab-cont .noti li{
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#contents .tab-cont .noti li:hover{
+  font-weight: bold;
+}
+#contents .tab-cont .noti li span{
+  display: block;
+}
+#contents .tab-cont .gallery{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+
+/*배너랑 바로가기*/
+#contents .banner, #contents .shortcut{
+  position: relative;
+  height: 180px;
+}
+#contents .shortcut a{
+  display: block;
+  height: 180px;
+}
+#contents .banner img, #contents .shortcut a img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contents .banner span, #contents  .shortcut span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  padding: 10px 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+}
+
+/*.popup-wrap*/
+.popup-wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-box{
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 30px;
+  position: relative;
+}
+.popup-box h2{
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.popup-box p{
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.popup-box button{
+  cursor: pointer;
+  border: none;
+  display: block;
+  background-color: steelblue;
+  color: #fff;
+  font-size: 1,4rem;
+  padding: 5px 10px;
+  position: absolute;
+  right: 30px;
+}
+
+/*footer*/
+footer .inner{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: #333;
+  color: #fff;
+}
+footer .f-logo{
+  width: 180px;
+}
+footer .f-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+footer .f-cont{
+  width: calc(100% - 180px);
+  text-align: center;
+  font-size: 1.4rem;
+}
+footer .f-cont ul{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+footer .f-cont ul li{
+  cursor: pointer;
+}
